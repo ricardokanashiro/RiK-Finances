@@ -46,9 +46,6 @@ header {
 
     @include phone-down {
         display: block;
-        position: absolute;
-        right: 2rem;
-        z-index: 1;
     }
 }
 
@@ -68,9 +65,35 @@ header {
         transition: filter 200ms;
     }
 
+    .user-actions__close-menu-btn__wrapper {
+        width: 100%;
+        height: 4rem;
+        position: relative;
+        display: none;
+
+        .user-actions__close-menu-btn {
+            width: 2rem;
+            padding: 0;
+    
+            background-color: transparent;
+            color: black;
+            font-size: 2.3rem;
+
+            position: absolute;
+            right: 2rem;
+            top: 2rem;
+
+            @include flex(center, center);
+        }
+
+        @include phone-down {
+            display: block;
+        }
+    }
+
     h4 {
         display: none;
-        margin-top: 5rem;
+        margin-top: 2rem;
     }
 
     button:hover {
@@ -87,13 +110,12 @@ header {
     @include phone-down {
         flex-flow: column nowrap;
         justify-content: flex-start;
-        padding-top: 4rem;
         gap: 1.5rem;
         background-color: white;
         width: 20rem;
         height: 100vh;
         position: absolute;
-        right: 0;
+        right: -20rem;
         top: 0;
         
         button {
@@ -107,4 +129,8 @@ header {
             margin-bottom: 1rem;
         }
     }
+}
+
+.active-user-actions {
+    right: 0;
 }
