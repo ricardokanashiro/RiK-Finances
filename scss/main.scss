@@ -1,0 +1,16 @@
+@import "config/variables";
+@import "config/reset";
+@import "config/utils";
+
+@import "components/header";
+
+#content-wrapper {
+    width: 100%;
+    min-height: 100vh;
+
+    background-color: $lightCyan;
+
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+}
