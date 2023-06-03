@@ -53,6 +53,9 @@ header {
     @include flex(center, center);
     gap: 2rem;
 
+    transition-duration: 300ms;
+    transition-property: position, right;
+
     button {
         background-color: $blue;
         border-radius: 1rem;

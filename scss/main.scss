@@ -3,6 +3,7 @@
 @import "config/utils";
 
 @import "components/header";
+@import "components/balance";
 
 #content-wrapper {
     width: 100%;
@@ -15,4 +16,8 @@
     flex-flow: column nowrap;
 
     overflow: hidden;
+}
+
+main {
+    width: 100%;
 }

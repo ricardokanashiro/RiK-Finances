@@ -78,6 +78,8 @@ header {
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  transition-duration: 300ms;
+  transition-property: position, right;
 }
 .header__user-actions button {
   background-color: #4C49ED;
@@ -152,6 +154,148 @@ header {
   right: 0;
 }
 
+.main__total-balance {
+  background-color: white;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 8rem;
+  border-radius: 1.2rem;
+  padding: 4rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 715px) {
+  .main__total-balance {
+    flex-direction: column;
+    padding: 0;
+    margin-top: 4rem;
+  }
+}
+
+.total-balance__info {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+@media (max-width: 715px) {
+  .total-balance__info {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 4rem;
+    gap: 4rem;
+  }
+}
+.total-balance__info h2 {
+  font-size: 4rem;
+}
+@media (max-width: 550px) {
+  .total-balance__info {
+    padding: 3rem;
+    gap: 1rem;
+  }
+  .total-balance__info h2 {
+    font-size: 2.8rem;
+  }
+}
+@media (max-width: 420px) {
+  .total-balance__info h2 {
+    font-size: 2.2rem;
+  }
+}
+
+.total-balance__info__last-transaction {
+  margin-top: 2rem;
+}
+@media (max-width: 715px) {
+  .total-balance__info__last-transaction {
+    margin-top: 0;
+  }
+}
+
+.last-transaction__value {
+  color: rgb(0, 196, 0);
+  font-size: 3rem;
+  font-weight: bold;
+}
+@media (max-width: 550px) {
+  .last-transaction__value {
+    font-size: 2.2rem;
+  }
+}
+@media (max-width: 420px) {
+  .last-transaction__value {
+    font-size: 1.5rem;
+  }
+}
+
+.last-transaction__text {
+  font-weight: bold;
+  color: gray;
+  font-size: 1.5rem;
+}
+@media (max-width: 550px) {
+  .last-transaction__text {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 420px) {
+  .last-transaction__text {
+    font-size: 0.8rem;
+  }
+}
+
+.total-balance__amount {
+  position: relative;
+  align-self: stretch;
+  width: 40rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+@media (max-width: 715px) {
+  .total-balance__amount {
+    height: 10rem;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.amount__value {
+  position: relative;
+  z-index: 1;
+  font-size: 4rem;
+  font-weight: bold;
+  color: white;
+}
+@media (max-width: 550px) {
+  .amount__value {
+    font-size: 3rem;
+  }
+}
+
+.amount-detail {
+  position: absolute;
+  top: -19rem;
+  right: -25rem;
+  background-color: blue;
+  height: 50rem;
+  width: 50rem;
+  border-radius: 50%;
+}
+@media (max-width: 715px) {
+  .amount-detail {
+    border-radius: 0;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+
 #content-wrapper {
   width: 100%;
   min-height: 100vh;
@@ -160,4 +304,8 @@ header {
   align-items: center;
   flex-flow: column nowrap;
   overflow: hidden;
+}
+
+main {
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */

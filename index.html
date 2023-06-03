@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <title>RiK's Finances</title>
 </head>
 <body>
@@ -24,7 +25,11 @@
             <div class="header__user-actions">
 
                 <div class="user-actions__close-menu-btn__wrapper">
-                    <button class="user-actions__close-menu-btn">x</button>
+                    <button class="user-actions__close-menu-btn">
+                        <span class="material-symbols-outlined">
+                            close
+                        </span>
+                    </button>
                 </div>
 
                 <h4>Ações do Usuário</h4>
@@ -36,7 +41,35 @@
         </header>
     
         <main>
-    
+            <div class="main__total-balance">
+                
+                <div class="total-balance__info">
+
+                    <h2>Total Ballance</h2>
+
+                    <div class="total-balance__info__last-transaction">
+
+                        <p class="last-transaction__value">
+                            + R$ 25,58
+                        </p>
+
+                        <p class="last-transaction__text">
+                            Last Transaction
+                        </p>
+                        
+                    </div>
+
+                </div>
+
+                <div class="total-balance__amount">
+
+                    <p class="amount__value">R$ 200,50</p>
+
+                    <div class="amount-detail"></div>
+
+                </div>
+
+            </div>
         </main>
     
         <footer>
