@@ -1,0 +1,19 @@
+.main__statistics {
+    width: 90%;
+    margin: 5rem auto;
+    border-radius: 1.2rem;
+    padding: 4rem;
+
+    background-color: white;
+
+    @include flex(center, center);
+    gap: 10rem;
+}
+
+.statistics__categories {
+    flex-basis: 50%;
+}
+
+.statistics__io {
+    flex-basis: 50%;
+}

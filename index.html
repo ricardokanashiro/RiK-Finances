@@ -41,11 +41,11 @@
         </header>
     
         <main>
-            <div class="main__total-balance">
+            <section class="main__total-balance">
                 
                 <div class="total-balance__info">
 
-                    <h2>Total Ballance</h2>
+                    <h2>Balanço Total</h2>
 
                     <div class="total-balance__info__last-transaction">
 
@@ -54,7 +54,7 @@
                         </p>
 
                         <p class="last-transaction__text">
-                            Last Transaction
+                            Última Transação
                         </p>
                         
                     </div>
@@ -69,7 +69,17 @@
 
                 </div>
 
-            </div>
+            </section>
+
+            <section class="main__statistics">
+                <section class="statistics__categories">
+                    <canvas id="pieChart"></canvas>
+                </section>
+
+                <section class="statistics__io">
+                    <canvas id="barChart"></canvas>
+                </section>
+            </section>
         </main>
     
         <footer>
@@ -79,6 +89,7 @@
         </footer>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="app.js"></script>
     
 </body>
