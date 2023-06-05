@@ -46,7 +46,7 @@ header {
   font-weight: bold;
 }
 .header__logo h3 span {
-  color: #4C49ED;
+  color: #4c49ed;
 }
 .header__logo img {
   width: 3rem;
@@ -82,7 +82,7 @@ header {
   transition-property: position, right;
 }
 .header__user-actions button {
-  background-color: #4C49ED;
+  background-color: #4c49ed;
   border-radius: 1rem;
   padding: 1.4rem 2.4rem;
   color: white;
@@ -299,22 +299,43 @@ header {
 
 .main__statistics {
   width: 90%;
+  height: 40rem;
   margin: 5rem auto;
   border-radius: 1.2rem;
-  padding: 4rem;
+  padding: 4rem 6rem;
   background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10rem;
 }
+@media (max-width: 915px) {
+  .main__statistics {
+    flex-direction: column;
+    height: auto;
+  }
+}
 
 .statistics__categories {
-  flex-basis: 50%;
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+@media (max-width: 915px) {
+  .statistics__categories {
+    width: 100%;
+  }
 }
 
 .statistics__io {
-  flex-basis: 50%;
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+@media (max-width: 915px) {
+  .statistics__io {
+    width: 100%;
+  }
 }
 
 #content-wrapper {
