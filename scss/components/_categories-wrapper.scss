@@ -1,0 +1,51 @@
+.main__categories-wrapper {
+    background-color: #4c49ed;
+    width: 90%;
+    
+    padding: 4rem 6rem;
+    margin: 0 auto;
+    border-radius: 1.2rem;
+
+    @include flex(center, center);
+    flex-wrap: wrap;
+
+    @include phone-down {
+        padding: 2rem;
+    }
+}
+
+.categories-wrapper__category {
+    width: 30rem;
+    height: 20rem;
+    background-color: white;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.153);
+    border-radius: 1.2rem;
+
+    @include flex(center, center);
+    flex-direction: column;
+    gap: 2.5rem;
+
+    h3 {
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #FD7D3B;
+    }
+
+    @include phone-down {
+        width: 25rem;
+        height: 15rem;
+
+        h3 {
+            font-size: 2rem;
+        }
+    
+        p {
+            font-size: 2rem;
+        }
+    }
+}
