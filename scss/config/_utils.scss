@@ -4,6 +4,12 @@
     align-items: $alignValue;
 }
 
+@mixin small-desktop-down {
+    @media(max-width: 1100px) {
+        @content;
+    }
+}
+
 @mixin tablet-landscape-down { 
     @media(max-width: 915px) {
         @content;

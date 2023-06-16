@@ -3,12 +3,13 @@
     height: 40rem;
     margin: 5rem auto;
     border-radius: 1.2rem;
-    padding: 4rem 6rem;
+    // padding: 4rem 6rem;
 
-    background-color: white;
+    // background-color: white;
+    background-color: transparent;
 
-    @include flex(center, center);
-    gap: 10rem;
+    @include flex(center, space-between);
+    gap: 4rem;
 
     @include tablet-landscape-down {
         flex-direction: column;
@@ -17,6 +18,10 @@
 }
 
 .statistics__categories {
+    background-color: white;
+    padding: 4rem;
+    border-radius: 1.2rem;
+
     width: 50%;
     height: 100%;
     position: relative;
@@ -27,6 +32,10 @@
 }
 
 .statistics__io {
+    background-color: white;
+    padding: 4rem;
+    border-radius: 1.2rem;
+
     width: 50%;
     height: 100%;
     position: relative;
