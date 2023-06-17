@@ -31,6 +31,7 @@
     box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.153);
     border-radius: 1.2rem;
     overflow: hidden;
+    cursor: pointer;
 
     position: relative;
 
@@ -55,6 +56,13 @@
         p {
             font-size: 2rem;
         }
+    }
+}
+
+.categories-wrapper__category:hover {
+
+    .category__arrow {
+        bottom: 0;
     }
 }
 
@@ -90,6 +98,11 @@
     background-color: red;
     border-radius: 1.2rem;
 
+    position: absolute;
+    top: 20rem;
+
+    transition: top 400ms ease-out;
+
     @include flex(center, center);
 
     .delete-icon {
@@ -97,6 +110,10 @@
         color: white;
         font-size: 4rem;
     }
+}
+
+.category__screen2-active {
+    top: 0;
 }
 
 .category__arrow {
@@ -107,7 +124,9 @@
     border-radius: 0 0 1.2rem 1.2rem;
 
     position: absolute;
-    bottom: 0;
+    bottom: -3.5rem;
+
+    transition: bottom 400ms ease-out;
 
     @include flex(center, center);
 
