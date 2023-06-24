@@ -365,7 +365,7 @@ header {
 }
 @media (max-width: 550px) {
   .main__categories-wrapper {
-    padding: 2rem;
+    padding: 0;
     grid-template-columns: 1fr;
   }
 }
@@ -374,7 +374,7 @@ header {
   width: 100%;
   height: 20rem;
   background-color: white;
-  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.153);
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.05);
   border-radius: 1.2rem;
   overflow: hidden;
   cursor: pointer;
@@ -430,7 +430,7 @@ header {
 .category__screen2 {
   height: 20rem;
   width: 100%;
-  background-color: red;
+  background-color: rgb(255, 0, 0);
   border-radius: 1.2rem;
   position: absolute;
   top: 20rem;
@@ -464,6 +464,11 @@ header {
 }
 .category__arrow .arrow-icon {
   color: white;
+}
+@media (max-width: 715px) {
+  .category__arrow {
+    display: none;
+  }
 }
 
 #content-wrapper {

@@ -15,15 +15,17 @@ function hideUserActions() {
 }
 
 function toggleCategoryDeleteScreen(event) {
-    
-    let category = event.target;
 
-    while(category.classList[0] != 'categories-wrapper__category') {
-        console.log(category.classList[0]);
-        category = category.parentNode;
+    if(!event.target.classList.contains('delete-icon')) {
+        let category = event.target;
+
+        while(category.classList[0] != 'categories-wrapper__category') {
+            console.log(category.classList[0]);
+            category = category.parentNode;
+        }
+
+        category.querySelector('.category__screen2').classList.toggle('category__screen2-active');
     }
-
-    category.querySelector('.category__screen2').classList.toggle('category__screen2-active');
 
 }
 
