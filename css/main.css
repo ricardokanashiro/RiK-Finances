@@ -405,7 +405,7 @@ header {
 }
 
 .category__screen1 {
-  height: 20rem;
+  height: 100%;
   width: 100%;
   background-color: white;
   border-radius: 1.2rem;
@@ -426,9 +426,20 @@ header {
   color: #4c49ed;
   text-align: center;
 }
+@media (max-width: 550px) {
+  .category__screen1 {
+    padding: 2rem;
+  }
+  .category__screen1 h3 {
+    font-size: 2rem;
+  }
+  .category__screen1 p {
+    font-size: 2rem;
+  }
+}
 
 .category__screen2 {
-  height: 20rem;
+  height: 100%;
   width: 100%;
   background-color: rgb(255, 0, 0);
   border-radius: 1.2rem;
@@ -471,6 +482,64 @@ header {
   }
 }
 
+.modal__categories {
+  width: 50rem;
+  height: 35rem;
+  background-color: white;
+  border-radius: 1.2rem;
+  padding: 2rem;
+  margin-bottom: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.modal__categories h3 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.modal__categories form {
+  margin: 3.5rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.modal__categories fieldset {
+  border: 1px solid rgb(99, 99, 99);
+  border-radius: 0.6rem;
+  position: relative;
+  width: max(60%, 15rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.modal__categories fieldset input {
+  border-radius: 0.6rem;
+  height: 4rem;
+  width: 100%;
+  padding: 0 2rem;
+}
+.modal__categories fieldset label {
+  position: absolute;
+  left: 1.2rem;
+  top: -1rem;
+  font-size: 1.4rem;
+  background-color: white;
+}
+.modal__categories fieldset + fieldset {
+  margin-top: 3rem;
+}
+.modal__categories button {
+  background-color: #4c49ed;
+  color: white;
+  font-weight: bold;
+  padding: 1.4rem;
+  border-radius: 1.2rem;
+}
+
 #content-wrapper {
   width: 100%;
   min-height: 100vh;
@@ -479,6 +548,7 @@ header {
   align-items: center;
   flex-flow: column nowrap;
   overflow: hidden;
+  position: relative;
 }
 
 main {

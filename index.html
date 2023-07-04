@@ -115,12 +115,20 @@
             <h3>Cadastrar Categoria</h3>
 
             <form>
-                <label for="categoryName invisible">Nome da categoria</label>
-                <input type="text" id="categoryName">
 
-                <label for="categoryValue invisible">Valor da categoria</label>
-                <input type="text" id="categoryValue">
+                <fieldset class="categoryNameFieldSet">
+                    <label for="categoryName invisible">Nome da categoria</label>
+                    <input type="text" id="categoryName">
+                </fieldset>
+
+                <fieldset class="categoryValueFieldSet">
+                    <label for="categoryValue invisible">Valor da categoria</label>
+                    <input type="text" id="categoryValue">
+                </fieldset>
+
             </form>
+
+            <button>Cadastrar</button>
         </div>
 
         <div class="modal__actions"></div>

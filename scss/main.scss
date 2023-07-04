@@ -6,6 +6,7 @@
 @import "components/balance";
 @import "components/statistics";
 @import "components/categories-wrapper";
+@import "components/modals";
 
 #content-wrapper {
     width: 100%;
@@ -18,6 +19,8 @@
     flex-flow: column nowrap;
 
     overflow: hidden;
+
+    position: relative;
 }
 
 main {

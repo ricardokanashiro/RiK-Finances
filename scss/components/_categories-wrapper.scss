@@ -68,7 +68,7 @@
 
 .category__screen1 {
 
-    height: 20rem;
+    height: 100%;
     width: 100%;
     background-color: white;
     border-radius: 1.2rem;
@@ -89,11 +89,23 @@
         color: $blue;
         text-align: center;
     }
+
+    @include phone-down {
+        padding: 2rem;
+
+        h3 {
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 2rem;
+        }
+    }
 }
 
 .category__screen2 {
 
-    height: 20rem;
+    height: 100%;
     width: 100%;
     background-color: rgb(255, 0, 0);
     border-radius: 1.2rem;
