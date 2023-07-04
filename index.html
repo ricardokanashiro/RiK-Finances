@@ -111,27 +111,59 @@
             </div>
         </footer>
 
-        <div class="modal__categories">
-            <h3>Cadastrar Categoria</h3>
+        <!-- <div class="modals__wrapper modal__categories__wrapper">
+            <div class="modal">
+                
+                <span class="material-symbols-outlined modalClose">
+                    close
+                </span>
 
-            <form>
+                <h3>Cadastrar Categoria</h3>
+    
+                <form>
+    
+                    <fieldset>
+                        <label for="categoryName invisible">Nome da categoria</label>
+                        <input type="text" id="categoryName">
+                    </fieldset>
+    
+                    <fieldset>
+                        <label for="categoryValue invisible">Valor da categoria</label>
+                        <input type="text" id="categoryValue">
+                    </fieldset>
+    
+                </form>
+    
+                <button>Cadastrar</button>
+            </div>
+        </div> -->
 
-                <fieldset class="categoryNameFieldSet">
-                    <label for="categoryName invisible">Nome da categoria</label>
-                    <input type="text" id="categoryName">
-                </fieldset>
+        <div class="modals__wrapper modal__actions__wrapper">
+            <div class="modal">
+                
+                <span class="material-symbols-outlined modalClose">
+                    close
+                </span>
 
-                <fieldset class="categoryValueFieldSet">
-                    <label for="categoryValue invisible">Valor da categoria</label>
-                    <input type="text" id="categoryValue">
-                </fieldset>
-
-            </form>
-
-            <button>Cadastrar</button>
+                <h3>Cadastrar Ação</h3>
+    
+                <form>
+    
+                    <fieldset class="modal__choose-action">
+                        <button class="choose-action__input">Entrada</button>
+                        <button class="choose-action__output">Saída</button>
+                    </fieldset>
+    
+                    <fieldset>
+                        <label for="categoryValue invisible">Valor da Ação</label>
+                        <input type="text" id="categoryValue">
+                    </fieldset>
+    
+                </form>
+    
+                <button>Cadastrar</button>
+            </div>
         </div>
-
-        <div class="modal__actions"></div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
