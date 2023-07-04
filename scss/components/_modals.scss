@@ -29,7 +29,7 @@
         border-radius: .6rem;
         position: relative;
 
-        width: max(60%, 15rem);
+        width: max(60%, 20rem);
 
 
         @include flex(center, center);
@@ -63,6 +63,29 @@
         font-weight: bold;
         padding: 1.4rem;
         border-radius: 1.2rem;
+    }
+
+    @include tablet-down {
+        width: 45rem;
+    }
+
+    @include phone-down {
+        width: 90%;
+
+        h3 {
+            font-size: 2.4rem;
+        }
+
+        fieldset {
+            input {
+                height: 3rem;
+            }
+
+            label {
+                font-size: 1rem;
+                top: -.7rem;
+            }
+        }
     }
 }
 

@@ -510,7 +510,7 @@ header {
   border: 1px solid rgb(99, 99, 99);
   border-radius: 0.6rem;
   position: relative;
-  width: max(60%, 15rem);
+  width: max(60%, 20rem);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -538,6 +538,26 @@ header {
   font-weight: bold;
   padding: 1.4rem;
   border-radius: 1.2rem;
+}
+@media (max-width: 715px) {
+  .modal__categories {
+    width: 45rem;
+  }
+}
+@media (max-width: 550px) {
+  .modal__categories {
+    width: 90%;
+  }
+  .modal__categories h3 {
+    font-size: 2.4rem;
+  }
+  .modal__categories fieldset input {
+    height: 3rem;
+  }
+  .modal__categories fieldset label {
+    font-size: 1rem;
+    top: -0.7rem;
+  }
 }
 
 #content-wrapper {
