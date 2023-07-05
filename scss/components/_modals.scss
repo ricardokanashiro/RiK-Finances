@@ -9,7 +9,7 @@
     width: 100%;
     height: 100vh;
 
-    @include flex(center, center);
+    display: none;
 }
 
 .modal {
@@ -36,14 +36,6 @@
 
         @include flex(center, center);
         flex-direction: column;
-
-        .activedActionInputBtn {
-            border: 2px solid red;
-        }
-
-        .activedActionOutputBtn {
-            border: 2px solid rgb(0, 197, 0);
-        }
     }
 
     fieldset {
@@ -72,6 +64,18 @@
             font-size: 1.4rem;
 
             background-color: white;
+        }
+
+        .activedActionInputBtn {
+            border: 2px solid red !important;
+            color: red;
+            background: white;
+        }
+
+        .activedActionOutputBtn {
+            border: 2px solid rgb(0, 197, 0) !important;
+            color: rgb(0, 197, 0);
+            background: white;
         }
     }
 
@@ -124,9 +128,13 @@
     }
 }
 
+.activedModal {
+    @include flex(center, center);
+}
+
 // Global Styles
 
-.modalClose {
+.closeModal {
     cursor: pointer;
 
     position: absolute;

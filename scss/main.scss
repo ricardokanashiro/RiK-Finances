@@ -26,3 +26,8 @@
 main {
     width: 100%;
 }
+
+#content-wrapper.locked {
+    height: 100vh;
+    overflow: hidden;
+}

@@ -490,9 +490,7 @@ header {
   background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: none;
 }
 
 .modal {
@@ -519,12 +517,6 @@ header {
   align-items: center;
   flex-direction: column;
 }
-.modal form .activedActionInputBtn {
-  border: 2px solid red;
-}
-.modal form .activedActionOutputBtn {
-  border: 2px solid rgb(0, 197, 0);
-}
 .modal fieldset {
   border: 1px solid rgb(99, 99, 99);
   border-radius: 0.6rem;
@@ -547,6 +539,16 @@ header {
   top: -1rem;
   font-size: 1.4rem;
   background-color: white;
+}
+.modal fieldset .activedActionInputBtn {
+  border: 2px solid red !important;
+  color: red;
+  background: white;
+}
+.modal fieldset .activedActionOutputBtn {
+  border: 2px solid rgb(0, 197, 0) !important;
+  color: rgb(0, 197, 0);
+  background: white;
 }
 .modal fieldset + fieldset {
   margin-top: 3rem;
@@ -589,7 +591,13 @@ header {
   }
 }
 
-.modalClose {
+.activedModal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.closeModal {
   cursor: pointer;
   position: absolute;
   top: 2rem;
@@ -609,4 +617,9 @@ header {
 
 main {
   width: 100%;
+}
+
+#content-wrapper.locked {
+  height: 100vh;
+  overflow: hidden;
 }/*# sourceMappingURL=main.css.map */
