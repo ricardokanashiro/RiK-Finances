@@ -1,0 +1,1 @@
+const variavel = 1;
