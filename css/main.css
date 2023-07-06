@@ -568,7 +568,9 @@ header {
 }
 .modal .modal__choose-action button {
   width: 50%;
-  border: 1.5px solid #4c49ed;
+  border: 2px solid #4c49ed;
+  transition-property: color, background, border;
+  transition-duration: 300ms;
 }
 @media (max-width: 715px) {
   .modal {
