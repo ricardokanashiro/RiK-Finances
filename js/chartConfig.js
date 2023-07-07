@@ -10,8 +10,6 @@ const chartPallete = [
     "#A740F7",
 ];
 
-export { chartPallete };
-
 // Charts Configs
 
 const pieChart = document.getElementById('pieChart');
@@ -63,5 +61,3 @@ const myBarChart = new Chart(barChart, {
       maintainAspectRatio: false,
     }
 });
-
-export { myBarChart, myPieChart };
