@@ -9,7 +9,12 @@ const categoryAddCategoryBtn = categoryModal.querySelector('button');
 
 const actionsModal = document.querySelector('.modal__actions__wrapper .modal');
 
+const deleteCategoryModal = document.querySelector('.modal__delete-category');
+const deleteCategoryModalBtn = document.querySelector('.modal__delete-category button');
+
 let deleteCategoryBtn = document.querySelectorAll('.delete-icon');
+
+let categoryEvent;
 
 let categories = [];
 
@@ -69,7 +74,7 @@ function updateApp() {
     deleteCategoryBtn = document.querySelectorAll('.delete-icon');
 
     deleteCategoryBtn.forEach(btn => btn.addEventListener(
-        'click', (event) => deleteCategory(event)
+        'click', (event) => showDeleteCategoryModal(event)
     ));
 }
 
@@ -101,25 +106,33 @@ function createCategory() {
     } 
 }
 
-function deleteCategory(event) {
-    let eventCategory = event.target.parentNode.parentNode;
+function showDeleteCategoryModal(event) {
+    contentWrapper.classList.add('locked');
+    deleteCategoryModal.classList.add('activedModal');
+
+    categoryEvent = event;
+}
+
+function deleteCategory() {
+    console.log(categoryEvent);
+    let eventCategory = categoryEvent.target.parentNode.parentNode;
 
     eventCategory = categories.find(
         category => category.name === eventCategory.querySelector('h3').innerText
     );
-
-    console.log('oi')
-
-    console.log(categories);
-    console.log(eventCategory);
 
     categories.splice(categories.indexOf(eventCategory), 1);
 
     localStorage.setItem('categories', JSON.stringify(categories));
 
     updateApp();
+
+    contentWrapper.classList.remove('locked');
+    deleteCategoryModal.classList.remove('activedModal');
 }
 
 // localStorage.clear();
 
 categoryAddCategoryBtn.addEventListener('click', createCategory);
+
+deleteCategoryModalBtn.addEventListener('click', deleteCategory);

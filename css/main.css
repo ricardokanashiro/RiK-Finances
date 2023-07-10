@@ -417,9 +417,11 @@ header {
   gap: 3rem;
 }
 .category__screen1 h3 {
+  width: 100%;
   font-size: 2.5rem;
   font-weight: bold;
   text-align: center;
+  word-wrap: break-word;
 }
 .category__screen1 p {
   font-size: 2.5rem;
@@ -592,6 +594,11 @@ header {
     font-size: 1rem;
     top: -0.7rem;
   }
+}
+
+.modal__delete-category button {
+  margin-top: 6rem;
+  background-color: red;
 }
 
 .activedModal {

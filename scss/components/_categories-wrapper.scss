@@ -79,9 +79,11 @@
     gap: 3rem;
 
     h3 {
+        width: 100%;
         font-size: 2.5rem;
         font-weight: bold;
         text-align: center;
+        word-wrap: break-word;
     }
 
     p {

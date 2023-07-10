@@ -131,6 +131,14 @@
     }
 }
 
+.modal__delete-category {
+
+    button {
+        margin-top: 6rem;
+        background-color: red;
+    }
+}
+
 .activedModal {
     @include flex(center, center);
 }
