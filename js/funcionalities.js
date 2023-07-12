@@ -4,6 +4,7 @@ const categoriesWrapper = document.querySelector('.main__categories-wrapper');
 
 const categoryModal = document.querySelector('.modal__categories__wrapper .modal');
 const categoryNameInput = categoryModal.querySelector('#categoryName');
+const categoryNameCharMax = categoryModal.querySelector('.categoryNameCharMax');
 const categoryValueInput = categoryModal.querySelector('#categoryValue');
 const categoryAddCategoryBtn = categoryModal.querySelector('button');
 
@@ -48,9 +49,14 @@ function updateApp() {
             <div class="categories-wrapper__category">
 
                 <div class="category__screen1">
-                    <h3>${category.name}</h3>
+                    <div class="category__name-wrapper">
+                        <h3>${category.name}</h3>
+                    </div>
 
-                    <p>R$ ${category.value}</p>
+                    <div class="category__value-wrapper">
+                        <p>R$ ${category.value}</p>
+                    </div>
+
                 </div>
 
                 <div class="category__screen2">
@@ -78,9 +84,19 @@ function updateApp() {
     ));
 }
 
+function limitInputCharacters(event) {
+    if(event.target.value.length > 40) {
+        event.target.value = event.target.value.substring(
+            0, event.target.value.length - 1
+        );
+    }
+
+    categoryNameCharMax.innerText = `${event.target.value.length}/40`;
+}
+
 function createCategory() {
 
-    if(!categoryNameInput.value && !categoryValueInput.value) {
+    if(!categoryNameInput.value || !categoryValueInput.value) {
         alert('Por favor, adicione o valor e/ou nome da categoria!');
     }
     else {
@@ -136,3 +152,5 @@ function deleteCategory() {
 categoryAddCategoryBtn.addEventListener('click', createCategory);
 
 deleteCategoryModalBtn.addEventListener('click', deleteCategory);
+
+categoryNameInput.addEventListener('keyup', (event) => limitInputCharacters(event));

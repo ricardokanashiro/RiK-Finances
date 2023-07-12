@@ -35,27 +35,8 @@
 
     position: relative;
 
-    @include tablet-down {
-        h3 {
-            font-size: 2.2rem;
-        }
-
-        p {
-            font-size: 2.2rem;
-        }
-    }
-
     @include phone-down {
-
         height: 15rem;
-
-        h3 {
-            font-size: 2rem;
-        }
-    
-        p {
-            font-size: 2rem;
-        }
     }
 }
 
@@ -72,11 +53,25 @@
     width: 100%;
     background-color: white;
     border-radius: 1.2rem;
-    padding: 0 2rem;
+    padding: 2rem;
+    gap: 1rem;
 
     @include flex(center, center);
     flex-direction: column;
-    gap: 3rem;
+
+    .category__name-wrapper {
+        width: 100%;
+        height: 65%;
+
+        @include flex(center, center);
+    }
+
+    .category__value-wrapper {
+        width: 100%;
+        height: 35%;
+
+        @include flex(center, center);
+    }
 
     h3 {
         width: 100%;
@@ -87,6 +82,7 @@
     }
 
     p {
+        width: 100%;
         font-size: 2.5rem;
         font-weight: bold;
         color: $blue;
