@@ -7,6 +7,7 @@ const categoryNameInput = categoryModal.querySelector('#categoryName');
 const categoryNameCharMax = categoryModal.querySelector('.categoryNameCharMax');
 const categoryValueInput = categoryModal.querySelector('#categoryValue');
 const categoryAddCategoryBtn = categoryModal.querySelector('button');
+const mobileMenu = document.querySelector('.header__user-actions');
 
 const actionsModal = document.querySelector('.modal__actions__wrapper .modal');
 
@@ -54,9 +55,12 @@ function updateApp() {
                     </div>
 
                     <div class="category__value-wrapper">
-                        <p>R$ ${category.value}</p>
+                        <p>R$ Em Teste</p>
                     </div>
 
+                    <div class="category__percentage-wrapper">
+                        <p>${category.percentage}%</p>
+                    </div>
                 </div>
 
                 <div class="category__screen2">
@@ -99,6 +103,9 @@ function createCategory() {
     if(!categoryNameInput.value || !categoryValueInput.value) {
         alert('Por favor, adicione o valor e/ou nome da categoria!');
     }
+    else if(categoryValueInput.value > 100) {
+        alert('Você excedeu o total da porcentagem disponível!');
+    }
     else {
         let storagedCategories = localStorage.getItem('categories');
 
@@ -109,7 +116,7 @@ function createCategory() {
         categories.push(
             {
                 name: categoryNameInput.value,
-                value: categoryValueInput.value
+                percentage: categoryValueInput.value
             }
         );
 
@@ -119,6 +126,8 @@ function createCategory() {
 
         categoryModal.parentNode.classList.remove('activedModal');
         contentWrapper.classList.remove('locked');
+
+        mobileMenu.classList.remove('active-user-actions')
     } 
 }
 

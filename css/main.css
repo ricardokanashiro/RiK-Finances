@@ -397,6 +397,7 @@ header {
   border-radius: 1.2rem;
   padding: 2rem;
   gap: 1rem;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -415,6 +416,14 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.category__screen1 .category__percentage-wrapper {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+.category__screen1 .category__percentage-wrapper p {
+  font-size: 1.8rem !important;
 }
 .category__screen1 h3 {
   width: 100%;
@@ -605,6 +614,14 @@ header {
   .modal fieldset label {
     font-size: 1rem;
     top: -0.7rem;
+  }
+  .modal fieldset .categoryNameCharMax {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.2rem;
+    color: #4c49ed;
+    font-weight: bold;
   }
 }
 

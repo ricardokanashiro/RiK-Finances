@@ -13,10 +13,12 @@ const headerBtns = document.querySelectorAll('.header__btn');
 
 function showUserActions() {
     userActions.classList.add('active-user-actions');
+    contentWrapper.classList.add('locked');
 }
 
 function hideUserActions() {
     userActions.classList.remove('active-user-actions');
+    contentWrapper.classList.remove('locked');
 }
 
 function showModal(event) {
