@@ -1,0 +1,25 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    height: auto;
+
+    background-color: red;
+}
+
+button {
+    cursor: pointer;
+}
+
+button, input {
+    font-family: $mainFont;
+}

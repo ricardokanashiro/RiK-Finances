@@ -1,0 +1,43 @@
+@import "config/variables";
+@import "config/reset";
+@import "config/utils";
+
+@import "components/header";
+@import "components/balance";
+@import "components/statistics";
+@import "components/categories-wrapper";
+@import "components/modals";
+
+#content-wrapper {
+    width: 100%;
+    min-height: 100vh;
+
+    background-color: $lightCyan;
+
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+main {
+    width: 100%;
+}
+
+#content-wrapper.locked {
+    height: 100vh;
+    overflow: hidden;
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+
+}

@@ -1,0 +1,149 @@
+.main__total-balance {
+    background-color: white;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 8rem;
+    border-radius: 1.2rem;
+    padding: 4rem;
+
+    overflow: hidden; 
+
+    @include flex(space-between, center);
+
+    @include tablet-down {
+        flex-direction: column;
+        padding: 0;
+        margin-top: 4rem;
+    }
+}
+
+// Balance Info:
+
+.total-balance__info {
+
+    width: 100%;
+
+    @include flex(center, flex-start);
+    flex-direction: column;
+
+    @include tablet-down {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 4rem;
+        gap: 4rem;
+    }
+
+    h2 {
+        font-size: 4rem;
+    }
+
+    @include phone-down {
+        padding: 3rem;
+        gap: 1rem;
+
+        h2 {
+            font-size: 2.8rem;
+        }
+    }
+
+    @include small-phone-down {
+        h2 {
+            font-size: 2.2rem;
+        } 
+    }
+}
+
+.total-balance__info__last-transaction {
+    margin-top: 2rem;
+
+    @include tablet-down {
+        margin-top: 0;
+    }
+}
+
+.last-transaction__value {
+    color: rgb(0, 196, 0);
+    font-size: 3rem;
+    font-weight: bold;
+
+    @include phone-down {
+        font-size: 2.2rem;
+    }
+
+    @include small-phone-down {
+        font-size: 1.5rem;   
+    }
+}
+
+.last-transaction__text {
+    font-weight: bold;
+    color: $gray;
+    font-size: 1.5rem;
+    
+    @include phone-down {
+        font-size: 1.2rem;
+    }
+
+    @include small-phone-down {
+        font-size: .8rem;   
+    }
+}
+
+// Balance Amount: 
+
+.total-balance__amount {
+    position: relative;
+    align-self: stretch;
+
+    width: 40rem;
+
+    @include flex(flex-end, center);
+
+    @include tablet-down {
+        height: 10rem;
+        width: 100%;
+
+        justify-content: center;
+    }
+}
+
+.amount__value {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+    margin-right: -4rem;
+
+    font-size: 4rem;
+    font-weight: bold;
+    color: white;
+
+    @include tablet-down {
+        margin-right: 0;
+    }
+
+    @include phone-down {
+        font-size: 3rem;
+    }
+}
+
+.amount-detail {
+    position: absolute;
+    top: -19rem;
+    right: -25rem;
+
+    background-color: #4c49ed;
+    height: 50rem;
+    width: 50rem;
+
+    border-radius: 50%;
+
+    @include tablet-down {
+        border-radius: 0;
+        top: 0;
+        right: 0;
+
+        height: 100%;
+        width: 100%;
+    }
+}

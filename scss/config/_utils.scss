@@ -1,0 +1,35 @@
+@mixin flex($justifyValue, $alignValue) {
+    display: flex;
+    justify-content: $justifyValue;
+    align-items: $alignValue;
+}
+
+@mixin small-desktop-down {
+    @media(max-width: 1100px) {
+        @content;
+    }
+}
+
+@mixin tablet-landscape-down { 
+    @media(max-width: 915px) {
+        @content;
+    }
+}
+
+@mixin tablet-down {
+    @media(max-width: 715px) {
+        @content;
+    }
+}
+
+@mixin phone-down {
+    @media(max-width: 550px) {
+        @content;
+    }
+}
+
+@mixin small-phone-down {
+    @media(max-width: 420px) {
+        @content;
+    }
+}

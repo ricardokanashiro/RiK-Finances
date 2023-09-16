@@ -1,0 +1,46 @@
+.main__statistics {
+    width: 90%;
+    height: 40rem;
+    margin: 5rem auto;
+    border-radius: 1.2rem;
+    // padding: 4rem 6rem;
+
+    // background-color: white;
+    background-color: transparent;
+
+    @include flex(center, space-between);
+    gap: 4rem;
+
+    @include tablet-landscape-down {
+        flex-direction: column;
+        height: auto;
+    }
+}
+
+.statistics__categories {
+    background-color: white;
+    padding: 4rem;
+    border-radius: 1.2rem;
+
+    width: 50%;
+    height: 100%;
+    position: relative;
+
+    @include tablet-landscape-down {
+        width: 100%;
+    }
+}
+
+.statistics__io {
+    background-color: white;
+    padding: 4rem;
+    border-radius: 1.2rem;
+
+    width: 50%;
+    height: 100%;
+    position: relative;
+
+    @include tablet-landscape-down {
+        width: 100%;
+    }
+}

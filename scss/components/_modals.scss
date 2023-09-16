@@ -1,0 +1,179 @@
+.modals__wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    background-color: rgba(0, 0, 0, 0.5);
+
+    width: 100%;
+    height: 100vh;
+
+    display: none;
+}
+
+.modal {
+    width: 50rem;
+    height: 35rem;
+
+    background-color: white;
+    border-radius: 1.2rem;
+    padding: 2rem;
+
+    position: relative;
+
+    @include flex(center, center);
+    flex-direction: column;
+
+    h3 {
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+    form {
+        margin: 3.5rem 0;
+        width: 100%;
+
+        @include flex(center, center);
+        flex-direction: column;
+    }
+
+    fieldset {
+        border: 1px solid rgb(99, 99, 99);
+        border-radius: .6rem;
+        position: relative;
+
+        width: max(60%, 20rem);
+
+        @include flex(center, center);
+        flex-direction: column;
+
+        input {
+            border-radius: .6rem;
+            height: 4rem;
+            width: 100%;
+            padding: 0 2rem;
+        }
+
+        #categoryName {
+            padding: 0 6rem 0 2rem;
+        }
+
+        .categoryNameCharMax {
+            position: absolute;
+            right: 1rem;
+            top: 1.25rem;
+            font-size: 1.4rem;
+            color: $blue;
+            font-weight: bold;
+        }
+
+        label {
+            position: absolute;
+            left: 1.2rem;
+            top: -1rem;
+
+            font-size: 1.4rem;
+
+            background-color: white;
+        }
+
+        .activedActionInputBtn {
+            border: 2px solid rgb(0, 197, 0) !important;
+            color: rgb(0, 197, 0);
+            background: white;
+        }
+
+        .activedActionOutputBtn {
+            border: 2px solid red !important;
+            color: red;
+            background: white;
+        }
+    }
+
+    fieldset + fieldset {
+        margin-top: 3rem;
+    }
+
+    button {
+        background-color: $blue;
+        color: white;
+        font-weight: bold;
+        padding: 1.4rem;
+        border-radius: 1.2rem;
+    }
+
+    .modal__choose-action {
+        margin-bottom: 2rem;
+        border: none;
+
+        flex-direction: row;
+        gap: 2rem;
+
+        button {
+            width: 50%;
+            border: 2px solid $blue;
+
+            transition-property: color, background, border;
+            transition-duration: 300ms;
+        }
+    }
+
+    @include tablet-down {
+        width: 45rem;
+    }
+
+    @include phone-down {
+        width: 90%;
+
+        h3 {
+            font-size: 2.4rem;
+        }
+
+        fieldset {
+            input {
+                height: 3rem;
+            }
+
+            label {
+                font-size: 1rem;
+                top: -.7rem;
+            }
+
+            .categoryNameCharMax {
+                position: absolute;
+                right: 1rem;
+                top: 1rem;
+                font-size: 1.2rem;
+                color: $blue;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.modal__delete-category {
+
+    button {
+        margin-top: 6rem;
+        background-color: red;
+    }
+}
+
+.activedModal {
+    @include flex(center, center);
+}
+
+.modal__withdraw__wrapper {
+    // display: flex;
+}
+
+// Global Styles
+
+.closeModal {
+    cursor: pointer;
+
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+}
