@@ -23,6 +23,11 @@
         height="50px"
         style="margin-left: 10px"
     >
+    <img 
+        src="https://seeklogo.com/images/C/chart-js-logo-BB0E7C3308-seeklogo.com.png" 
+        height="50px"
+        style="margin-left: 10px"
+    >
 </div>
 
 ## Sobre o Projeto:
