@@ -4,6 +4,12 @@
     <img src="./images/RiK Finances Screenshot.png" width="70%">
 </p>
 
+<p align="center">
+    <a href="https://ricardokanashiro.github.io/RiK-Finances/" target="_blank">
+        <img width="350px" src="https://logos-world.net/wp-content/uploads/2020/11/GitHub-Emblem.png" />
+    </a>
+</p>
+
 ## Tecnologias Utilizadas:
 
 <p>Este projeto inteiro foi desenvolvido com as seguintes tecnologias: </p>
