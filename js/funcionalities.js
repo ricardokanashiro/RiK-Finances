@@ -92,7 +92,8 @@ function updateApp() {
     }
 
     lastTransaction.innerText = totalBalance.lastTransaction;
-    amountValue.innerText = formatCurrency(totalBalance.total - totalBalance.withdraw);
+    totalBalance.total -= totalBalance.withdraw
+    amountValue.innerText = formatCurrency(totalBalance.total);
 
     verifyTransactionAction(totalBalance.lastTransaction, lastTransaction);
 
@@ -386,12 +387,6 @@ function storeTransaction() {
     ) {
         return alert('O valor é inválido!');
     }
-
-    // let storedTransactions = localStorage.getItem('transactions');
-
-    // if(storedTransactions) {
-    //     transactions = JSON.parse(storedTransactions);
-    // }
 
     let selectedMonth = transactions.find(item => item.month === currentMonth);
 
