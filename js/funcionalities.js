@@ -92,8 +92,7 @@ function updateApp() {
     }
 
     lastTransaction.innerText = totalBalance.lastTransaction;
-    totalBalance.total -= totalBalance.withdraw
-    amountValue.innerText = formatCurrency(totalBalance.total);
+    amountValue.innerText = formatCurrency((totalBalance.total - totalBalance.withdraw));
 
     verifyTransactionAction(totalBalance.lastTransaction, lastTransaction);
 
@@ -332,11 +331,18 @@ function deleteCategory() {
 
     othersCategory.percentage += Number(eventCategory.percentage);
 
+    if(eventCategory.withdraw) {
+        totalBalance.withdraw -= Number(eventCategory.withdraw);
+        totalBalance.total -= Number(eventCategory.withdraw);
+    }
+
     localStorage.setItem('othersCategory', JSON.stringify(othersCategory));
 
     categories.splice(categories.indexOf(eventCategory), 1);
 
     localStorage.setItem('categories', JSON.stringify(categories));
+
+    localStorage.setItem('total', JSON.stringify(totalBalance));
 
     updateApp();
 
